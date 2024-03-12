@@ -1,0 +1,183 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="QuanLy.master.cs" Inherits="_23_WebHasaki_5701.QuanLy" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+        .auto-style2 {
+            width: 430px;
+            text-align: right;
+        }
+        .auto-style3 {
+            color: #FFFFFF;
+            font-size: xx-large;
+        }
+        .auto-style4 {
+            text-align: left;
+        }
+        .auto-style5 {
+            text-decoration: none;
+            color: #006600;
+            font-size: medium;
+        }
+        .auto-style6 {
+            text-align: center;
+        }
+        .auto-style7 {
+            text-decoration: none;
+            color: #006600;
+        }
+        .auto-style8 {
+            color: #FFFFFF;
+        }
+        .auto-style9 {
+            width: 367px;
+        }
+        .auto-style10 {
+            color: #FFFFFF;
+            font-size: small;
+        }
+        .auto-style11 {
+            height: 127px;
+        }
+        .auto-style12 {
+            width: 100%;
+            height: 413px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <table class="auto-style12">
+                <tr>
+                    <td colspan="4" class="auto-style11">
+                        <table class="auto-style1">
+                            <tr>
+                                <td class="auto-style2" style="background-color: #306E51">
+                                    <asp:Image ID="Image1" runat="server" ImageUrl="~/HinhAnh/logoHS.png" Height="133px" />
+                                </td>
+                                <td class="auto-style4" style="background-color: #306E51; font-family: Arial, Helvetica, sans-serif;">
+                                    <asp:Label ID="Label1" runat="server" CssClass="auto-style3" Text="TRANG QUẢN LÝ"></asp:Label>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style6"><strong>
+                        <asp:LinkButton ID="linkbtnQLNV" runat="server" CssClass="auto-style5" OnClick="linkbtnQLNV_Click">QUẢN LÝ NHÂN VIÊN</asp:LinkButton>
+                        </strong></td>
+                    <td class="auto-style6">
+                        <strong>
+                        <asp:LinkButton ID="linkbtnQLKH" runat="server" CssClass="auto-style7" OnClick="linkbtnQLKH_Click">QUẢN LÝ KHÁCH HÀNG</asp:LinkButton>
+                        </strong>
+                    </td>
+                    <td class="auto-style6">
+                        <strong>
+                        <asp:LinkButton ID="linkbtnQLNCC" runat="server" CssClass="auto-style7" OnClick="linkbtnQLNCC_Click">QUẢN LÝ NHÀ CUNG CẤP</asp:LinkButton>
+                        </strong>
+                    </td>
+                    <td class="auto-style6">
+                        <strong>
+                        <asp:LinkButton ID="linkbtnBaoCao" runat="server" CssClass="auto-style7" OnClick="linkbtnBaoCao_Click">QUÁN LÝ BÁO CÁO DOANH THU</asp:LinkButton>
+                        </strong>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4">
+                        <table class="auto-style1">
+                            <tr>
+                                <td class="auto-style6" style="color: #306E51"><strong>
+                        <asp:Menu ID="MenuPN" align="center" runat="server" CssClass="auto-style8" ForeColor="#006600" StaticSubMenuIndent="16px" Orientation="Horizontal" RenderingMode="List">
+                            <Items>
+                                <asp:MenuItem Text="QUẢN LÝ PHIẾU NHẬP" Value="QUẢN LÝ PHIẾU NHẬP" NavigateUrl="~/FormQLPhieuNhap.aspx">
+                                    <asp:MenuItem Text="CT PHIẾU NHẬP" Value="CT PHIẾU NHẬP" NavigateUrl="~/FormQLCTPhieuNhap.aspx"></asp:MenuItem>
+                                </asp:MenuItem>
+                            </Items>
+                            <StaticItemTemplate>
+                                <%# Eval("Text") %>
+                            </StaticItemTemplate>
+                        </asp:Menu>
+                                    </strong></td>
+                                <td>
+                                    <strong>
+                        <asp:Menu ID="MenuHD"  align="center" runat="server" CssClass="auto-style8" ForeColor="#006600" Orientation="Horizontal" RenderingMode="List">
+                            <Items>
+                                <asp:MenuItem Text="QUẢN LÝ HÓA ĐƠN" Value="QUẢN LÝ HÓA ĐƠN" NavigateUrl="~/FormQLHoaDon.aspx">
+                                    <asp:MenuItem Text="CT HÓA ĐƠN" Value="CT HÓA ĐƠN" NavigateUrl="~/FormQLCTHoaDon.aspx"></asp:MenuItem>
+                                </asp:MenuItem>
+                            </Items>
+                        </asp:Menu>
+                                    </strong>
+                                </td>
+                                <td>
+                                    <strong>
+                                    <asp:Menu ID="MenuSP" runat="server" ForeColor="#006600" Orientation="Horizontal" RenderingMode="List">
+                                        <Items>
+                                            <asp:MenuItem Text="QUẢN LÝ SẢN PHẨM" Value="QUẢN LÝ SẢN PHẨM" NavigateUrl="~/FormQLSanPham.aspx">
+                                                <asp:MenuItem Text="QL LOẠI SẢN PHẨM" Value="QL LOẠI SẢN PHẨM" NavigateUrl="~/FormQLLoaiSP.aspx"></asp:MenuItem>
+                                            </asp:MenuItem>
+                                        </Items>
+                                    </asp:Menu>
+                                    </strong>
+                                </td>
+                                <td>
+                                    <strong>
+                                    <asp:Menu ID="MenuDDH" align="center" runat="server" ForeColor="#006600" Orientation="Horizontal" RenderingMode="List">
+                                        <Items>
+                                            <asp:MenuItem Text="QUẢN LÝ ĐƠN ĐẶT HÀNG" Value="QUẢN LÝ ĐƠN ĐẶT HÀNG" NavigateUrl="~/FormQLDonDatHang.aspx">
+                                            </asp:MenuItem>
+                                        </Items>
+                                    </asp:Menu>
+                                    </strong>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4">
+                        <table class="auto-style1">
+                            <tr>
+                                <td class="auto-style9" style="background-color: #306E51"><strong>
+                                    <asp:Label ID="Label2" runat="server" CssClass="auto-style8" Text="LIÊN HỆ "></asp:Label>
+                                    </strong>
+                                    <br />
+                                    <asp:Image ID="Image2" runat="server" Height="45px" ImageUrl="~/HinhAnh/phone.png" Width="45px" />
+                                    <asp:Label ID="Label3" runat="server" CssClass="auto-style8" Text="Hotline: 1800 6324"></asp:Label>
+                                    <br />
+                                    <br />
+                                    <asp:Label ID="Label6" runat="server" CssClass="auto-style10" Text="Hotline khiếu nại miễn phí: 1800 6310 (Mỹ phẩm – phím 1 | Clinic &amp; Spa – phím 2)"></asp:Label>
+                                    <br />
+                                    <asp:Image ID="Image3" runat="server" Height="45px" ImageUrl="~/HinhAnh/mail.png" Width="45px" />
+                                    <asp:Label ID="Label4" runat="server" CssClass="auto-style8" Text="Email: hasaki@gmail.com"></asp:Label>
+                                </td>
+                                <td class="auto-style6" style="background-color: #306E51">
+                                    <asp:Image ID="Image4" runat="server" Height="40px" ImageUrl="~/HinhAnh/home.png" Width="45px" />
+                                    <asp:Label ID="Label5" runat="server" CssClass="auto-style10" Text="Trụ sở chính: Trụ sở Hasaki - số 555 đường 3/2, phường 8, quận 10, TPHCM."></asp:Label>
+                                    <asp:Image ID="Image5" runat="server" Height="118px" ImageUrl="~/HinhAnh/logoHS.png" Width="146px" />
+                                    <br />
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,300 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterHasaki.master.cs" Inherits="_23_WebHasaki_5701.MasterHasaki" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <style>
+        body
+        {
+            background-image:url('HinhAnh/nenHasaki.png');
+            background-size:cover;
+            background-attachment:fixed;
+
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+        .auto-style2 {
+            height: 31px;
+            width: 1270px;
+        }
+        .auto-style5 {
+            height: 25px;
+            text-align: center;
+        }
+        .auto-style7 {
+            width: 1232px;
+            height: 409px;
+        }
+        .auto-style8 {
+            text-align: center;
+        }
+        .auto-style9 {
+            width: 168px;
+            text-align: center;
+        }
+        .auto-style10 {
+            text-align: center;
+            width: 329px;
+        }
+        .auto-style11 {
+            text-decoration: none;
+            color: #006600;
+            font-size: large;
+        }
+        .auto-style12 {
+            font-size: large;
+            color: #006600;
+        }
+        .auto-style13 {
+            font-size: small;
+            color: #000000;
+        }
+        .auto-style16 {
+            font-size: small;
+        }
+        .auto-style17 {
+            text-align: center;
+            width: 1270px;
+        }
+        .auto-style18 {
+            width: 1270px;
+        }
+        .auto-style19 {
+            text-align: center;
+            width: 652px;
+        }
+        .auto-style20 {
+            width: 5px;
+        }
+        .auto-style21 {
+            text-decoration: none;
+        }
+        .auto-style22 {
+            color: #FF0066;
+        }
+        .auto-style23 {
+            color: #FF3399;
+        }
+        .auto-style24 {
+            color: #FF0000;
+        }
+        .auto-style26 {
+            width: 1270px;
+            text-align: right;
+        }
+        .auto-style32 {
+            text-align: center;
+            width: 240px;
+        }
+        .auto-style36 {
+            text-align: center;
+            width: 268px;
+        }
+        .auto-style37 {
+            text-align: center;
+            width: 256px;
+        }
+        .auto-style39 {
+            text-align: center;
+            width: 241px;
+        }
+        .auto-style40 {
+            text-align: center;
+            width: 254px;
+        }
+        .auto-style43 {
+            text-align: center;
+            width: 274px;
+        }
+        .auto-style44 {
+            text-align: center;
+            width: 249px;
+        }
+        .auto-style45 {
+            text-align: center;
+            width: 250px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <table class="auto-style1">
+            <tr>
+                <td class="auto-style2">
+                    <table class="auto-style1">
+                        <tr>
+                            <td class="auto-style5"><strong>
+                                <asp:LinkButton ID="linkbtnTC" runat="server" CssClass="auto-style11" OnClick="linkbtnTC_Click">TRANG CHỦ</asp:LinkButton>
+                                </strong></td>
+                            <td class="auto-style5"><strong>
+                                <asp:LinkButton ID="linkbtnGT" runat="server" CssClass="auto-style11" OnClick="linkbtnGT_Click">GIỚI THIỆU</asp:LinkButton>
+                                </strong></td>
+                            <td class="auto-style5"><strong>
+                                <asp:LinkButton ID="linkbtnLH" runat="server" CssClass="auto-style11" OnClick="linkbtnLH_Click">LIÊN HỆ </asp:LinkButton>
+                                </strong></td>
+                            <td class="auto-style5"><strong>
+                                <asp:LinkButton ID="linkbtnHTCH" runat="server" CssClass="auto-style11" OnClick="linkbtnHTCH_Click">HỆ THỐNG CỬA HÀNG</asp:LinkButton>
+                                </strong></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style17">
+                    <img alt="biaHasaki" class="auto-style7" src="HinhAnh/biaHasaki.png" /></td>
+            </tr>
+            <tr>
+                <td class="auto-style18">
+                    <table class="auto-style1">
+                        <tr>
+                            <td class="auto-style9">
+                                <asp:ImageButton ID="imagebtnTC" runat="server" Height="89px" ImageUrl="~/HinhAnh/logoHS.png" Width="153px" OnClick="imagebtnTC_Click" />
+                            </td>
+                            <td class="auto-style10">
+                                <asp:TextBox ID="txtTK" placeholder="Nhập sản phẩm cần tìm..." runat="server" Height="25px" Width="257px"></asp:TextBox>
+                            </td>
+                            <td class="auto-style8">
+                                <asp:ImageButton ID="imagebtnTK" runat="server" ImageUrl="~/HinhAnh/timkiem.png" Width="50px" OnClick="imagebtnTK_Click" />
+                            </td>
+                            <td class="auto-style8">
+                                <asp:ImageButton ID="imagebtnBill" runat="server" ImageUrl="~/HinhAnh/bill (1).png" OnClick="imagebtnBill_Click" />
+                            </td>
+                            <td class="auto-style8">
+                                <asp:ImageButton ID="imagebtnGH" runat="server" ImageUrl="~/HinhAnh/giohang.png" OnClick="imagebtnGH_Click" />
+                                <asp:Label ID="lblSoLuong" runat="server" Text="0"></asp:Label>
+                            </td>
+                            <td class="auto-style8">
+                                <asp:ImageButton ID="imagebtnLogin" runat="server" ImageUrl="~/HinhAnh/login.png" OnClick="imagebtnLogin_Click" />
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style18" style="font-family: 'Palatino Linotype'">
+                    <strong>&nbsp;&nbsp;
+                    <asp:Label ID="Label1" runat="server" CssClass="auto-style12" Text="DANH MỤC SẢN PHẨM"></asp:Label>
+                    </strong></td>
+            </tr>
+            <tr>
+                <td class="auto-style18" style="font-family: 'Palatino Linotype'">
+                    <table class="auto-style1">
+                        <tr>
+                            <td class="auto-style43" style="font-family: Arial, Helvetica, sans-serif">
+                                <asp:ImageButton ID="imagebtnDM" runat="server" Height="130px" ImageUrl="~/HinhAnh/avataDM.jpg" Width="155px" OnClick="imagebtnDM_Click" />
+                                <br />
+                                <asp:Label ID="Label9" runat="server" CssClass="auto-style16" Text="Dưỡng môi"></asp:Label>
+                            </td>
+                            <td class="auto-style44" style="font-family: Arial, Helvetica, sans-serif">
+                                <asp:ImageButton ID="imagebtnKDA" runat="server" Height="130px" ImageUrl="~/HinhAnh/avataDA.jpg" Width="155px" OnClick="imagebtnKDA_Click" />
+                                <br />
+                                <asp:Label ID="Label10" runat="server" CssClass="auto-style16" Text="Kem Dưỡng Ẩm"></asp:Label>
+                            </td>
+                            <td class="auto-style45" style="font-family: Arial, Helvetica, sans-serif">
+                                <asp:ImageButton ID="imagebtnLotion" runat="server" Height="130px" ImageUrl="~/HinhAnh/avataLotion.jpg" Width="155px" OnClick="imagebtnLotion_Click" />
+                                <br />
+                                <asp:Label ID="Label11" runat="server" CssClass="auto-style16" Text="Lotion/ Dưỡng thể"></asp:Label>
+                            </td>
+                            <td class="auto-style39" style="font-family: Arial, Helvetica, sans-serif">
+                                <asp:ImageButton ID="imagebtnSR" runat="server" Height="125px" ImageUrl="~/HinhAnh/avataSR.jpg" Width="155px" OnClick="imagebtnSR_Click" />
+                                <br />
+                                <asp:Label ID="Label7" runat="server" CssClass="auto-style16" Text="Serum"></asp:Label>
+                            </td>
+                            <td class="auto-style8" style="font-family: Arial, Helvetica, sans-serif">
+                                <asp:ImageButton ID="imagebtnMN" runat="server" Height="130px" ImageUrl="~/HinhAnh/avataMN.jpg" Width="155px" OnClick="imagebtnMN_Click" />
+                                <br />
+                                <asp:Label ID="Label4" runat="server" CssClass="auto-style16" Text="Mặt nạ"></asp:Label>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style18">
+                    <table class="auto-style1">
+                        <tr>
+                            <td class="auto-style36" style="font-family: Arial, Helvetica, sans-serif">
+                                <asp:ImageButton ID="imagebtnToner" runat="server" Height="130px" ImageUrl="~/HinhAnh/avataToner.jpg" Width="155px" OnClick="imagebtnToner_Click" />
+                                <br />
+                                <asp:Label ID="Label2" runat="server" CssClass="auto-style13" Text="Toner/Dưỡng ẩm"></asp:Label>
+                            </td>
+                            <td class="auto-style40" style="font-family: Arial, Helvetica, sans-serif">
+                                <asp:ImageButton ID="imagebtnKCN" runat="server" Height="130px" ImageUrl="~/HinhAnh/avataKCN.jpg" Width="155px" OnClick="imagebtnKCN_Click" />
+                                <br />
+                                <asp:Label ID="Label3" runat="server" CssClass="auto-style16" Text="Kem chống nắng"></asp:Label>
+                            </td>
+                            <td class="auto-style37" style="font-family: Arial, Helvetica, sans-serif">
+                                <asp:ImageButton ID="imagebtnSRM" runat="server" Height="125px" ImageUrl="~/HinhAnh/avataSRM.jpg" Width="155px" OnClick="imagebtnSRM_Click" />
+                                <br />
+                                <asp:Label ID="Label5" runat="server" CssClass="auto-style16" Text="Sửa rửa mặt"></asp:Label>
+                            </td>
+                            <td class="auto-style32" style="font-family: Arial, Helvetica, sans-serif">
+                                <asp:ImageButton ID="imagebtnNTT" runat="server" Height="125px" ImageUrl="~/HinhAnh/avataNTT.jpg" Width="155px" OnClick="imagebtnNTT_Click" />
+                                <br />
+                                <asp:Label ID="Label6" runat="server" CssClass="auto-style16" Text="Nước tẩy trang"></asp:Label>
+                            </td>
+                            <td class="auto-style8" style="font-family: Arial, Helvetica, sans-serif">
+                                <asp:ImageButton ID="imagebtnST" runat="server" Height="130px" ImageUrl="~/HinhAnh/avataST.jpg" Width="155px" OnClick="imagebtnST_Click" />
+                                <br />
+                                <asp:Label ID="Label8" runat="server" CssClass="auto-style16" Text="Sữa tắm"></asp:Label>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style18">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style18">
+                    <table class="auto-style1">
+                        <tr>
+                            <td class="auto-style20">
+                                <asp:Image ID="Image4" runat="server" Height="155px" ImageUrl="~/HinhAnh/home_bia.jpg" Width="400px" />
+                            </td>
+                            <td class="auto-style19">
+                                <asp:Image ID="Image3" runat="server" Height="155px" ImageUrl="~/HinhAnh/flashsale.png" Width="400px" />
+                            </td>
+                            <td class="auto-style8">
+                                <asp:Image ID="Image2" runat="server" Height="155px" ImageUrl="~/HinhAnh/home_freeshipping.jpg" Width="400px" />
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style18">
+                    <a href="https://www.facebook.com/Hasaki.vn" class="auto-style21"><strong>FACEBOOK</strong></a> ||<span class="auto-style22"><strong> </strong></span> <a href="https://www.instagram.com/hasakibeauty/" class="auto-style21"><span class="auto-style23"><strong>INSTAGRAM</strong></span></a>|| <a href="https://www.youtube.com/@HasakiBeautySpa" class="auto-style21"><strong><span class="auto-style24">YOUTUBE</span></strong></a>
+
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style26">
+                    <p class="auto-style8"><strong>Được chứng nhận</strong></p>
+                    
+                    <div class="auto-style8">
+                    
+                    <asp:Image ID="Image5" runat="server" Height="80px" ImageUrl="~/HinhAnh/logobct.jpg" Width="180px" />
+                    <br />
+                    </div>
+                    <p class="auto-style8"><strong><span class="auto-style16">Bản quyền © 2016 Hasaki.vn</span><br class="auto-style16" />
+                        </strong><span class="auto-style16">Công Ty cổ phần HASAKI BEAUTY & CLINIC</span><br class="auto-style16" />
+                        <span class="auto-style16">Giấy chứng nhận Đăng ký Kinh doanh số 0313612829 do</span><br class="auto-style16" />
+                        <span class="auto-style16">Sở Kế hoạch và Đầu tư Thành phố Hồ Chí Minh cấp ngày 13/01/2016 </span> </p>
+
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

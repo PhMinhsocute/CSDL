@@ -1,0 +1,25 @@
+﻿TẬP TIN HƯỚNG DẪN
+    1. Tập tin báo cáo: Giảng viên chọn thư mục Báo Cáo, bên trong bao gồm file Word và file PDF giảng viên có thể chọn 1 trong 2 flie để xem.
+    2. Thư mục Cơ sở dữ liệu và thư mục Ứng dụng giảng viên sử dụng ứng dụng MICROSOFT SQL SERVER để xem.
+Giảng viên có thể tải ứng dụng MICROSOFT SQL SERVER theo đường link sau: https://www.microsoft.com/en-us/sql-server/sql-server-downloads
+Sau đó, máy tính sẽ hiện lên khung CONNECT TO SERVER, giảng viên tiến hành chọn:
+    • server type: Database Engine
+    • server name: được mặc định là thiết bị của người dùng
+    • authentication:
+    • Windows Authentication để kết nối được mọi cơ sở dữ liệu (không có passwword, giảng viên kết nối vào đây để có thể xem được toàn bài)
+    • SQL Server Authentication để kết nối với cơ sở dữ liệu được cài đặt trước.
+    3. Truy cập tập tin SQL
+    • Mở tập tin.bak
+Bước 1: Giảng viên click chuột phải vào Database. 
+Bước 2: Chọn Restore Database
+Bước 3: Tại bảng Restore Database, chọn Device.
+Bước 4: Click vào mục from Device, chọn Add và tìm đến đường dẫn cho tập tin Quanlykho.bak, sau đó chọn ok.
+Bước 5: Tại mục to Database chọn Quanlykho, nhấn Ok
+Việc Restore đã được thực hiện, chọn Refresh và có thể truy cập cơ sở dữ liệu.
+Giảng viên thực hiện điều này cho các tập tin tương đồng khác.
+    • Mở tập tin.mdf
+Bước 1: Giảng viên click chuột phải vào Database.
+Bước 2: Chọn Attach 
+Bước 3: Tại bảng Attach Database chọn add File.
+Bước 4: Tại thư mục thứ 2, click Quanlykho.mdf, nhấn OK.
+Việc Attach đã được thực hiện, chọn Refresh để ứng dụng load lại và có thể truy cập cơ sở dữ liệu.
